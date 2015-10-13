@@ -76,7 +76,7 @@
 
 \subsection{Definition}
 Ensemble des technologies de l'électronique de l'information et des télécommunications utilisées dans les domiciles. Elles visent à assurer des fonctions de sécurité, de confort, de gestion d'énergie et de communication qu'on peut retrouver dans une maison.
-
+\includegraphics[scale = 0.75]{page1.jpg}
 
 Câblée ou fonctionnant par ondes radio, la domotique investit notre univers quotidien pour nous faciliter la vie. Souvent on la pratique sans y penser, en actionnant par exemple la télécommande du téléviseur ou en réglant le programmateur du lave-linge. Dans ses applications les plus évoluées, la domotique met en réseau et coordonne le fonctionnement de différents types d’équipements ménagers, de travail, de loisir… Les services offerts couvrent trois domaines principaux : confort domestique, économies d’énergie, protection.
 
@@ -102,8 +102,23 @@ de piloter indifféremment des équipements infrarouges ou radio. Ou encore, des
 
 À l’usage, cette technologie présente des inconvénients non négligeables. La multiplicité des solutions proposées peut poser des problèmes d’interférences. Les ondes radios sont sensibles aux rayonnements électromagnétiques (éléments métalliques…) et la portée des infrarouges est limitée à quelques mètres. Par ailleurs, les fréquences utilisées sont loin d’être standardisées. Les protocoles « propriétaires » compliquent singulièrement la centralisation des matériels de marques différentes, quand ils ne l’interdisent pas tout bonnement.
 
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.75]{tableau.png}
+\caption[le titre]{Répartition des fréquences utilisées dans les 
+applications domotiques}
+\end{center}
+\end{figure}
+
 \subsection{Courant porteur}
 Compatible avec le pilotage sans fil (radio, infrarouge), le courant porteur en ligne (CPL) présente l’avantage d’utiliser les circuits électriques existants. Le CPL superpose au signal électrique du secteur de 50 Hz (phase et neutre) une fréquence plus élevée (1,6 à 30 MHz) et de moindre amplitude. Sur cette bande, chaque type d’équipement (domestique, informatique) utilise une fréquence différente afin de pouvoir cohabiter sans se parasiter. Propagé sur l’installation électrique du logement, le signal CPL est reçu et décodé à distance par les appareils dédiés branchés sur le réseau. Pour contourner les perturbations électriques « naturelles », ceux-ci intègrent divers outils de protection (coupleurs, filtres) et de correction d’erreurs. Il est facile de faire évoluer l’installation en déplaçant des prises, en ajoutant des adaptateurs ou en créant des extensions de ligne. le CPL n’est pas à l’abri d’un défaut ponctuel de l’installation électrique, d’un transformateur défectueux, d’une perturbation créée par un appareil électrique (aspirateur, outils de bricolage, radio/télé…).
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.5]{CPL.jpg}
+\end{center}
+\end{figure}
+
 
 \subsection{Cable dédié}
 La technologie BUS/SCS offre les meilleures conditions de performance et de fiabilité en réduisant le nombre de voies nécessaires à la communication et en mutualisant les données. Elle utilise un câble composé de conducteurs torsadés par paires (deux au minimum) alimenté en très basse tension (courant faible) qui sert à la fois pour l'alimentation des interfaces de commandes (27 V non polarisé) et pour la transmission des ordres entre les points de commande et les contrôleurs installés dans le tableau électrique. L’entrelacement a pour but de contrer les interférences électriques qui pénalisent le CPL. Les contrôleurs sont raccordés d'une part au bus et d'autre part au réseau et aux charges à commander.
@@ -113,6 +128,19 @@ La configuration du système se fait par le positionnement de cavaliers directem
 Mais les qualités sont variables pour les bus comme pour tout autre produit. Les meilleurs câbles sont blindés ou écrantés, de type STP (Shielded Twisted Pair ) ou FTP (Foil screened Twisted Pair ). Quoique plus répandues, les versions non blindées, UTP (Unshielded Twisted Pair ), sont moins bien protégées et l’on doit veiller à la qualité de leur gainage.
 
 Ces câbles se déclinent par catégories indiquant leurs capacités : les catégories 5, 5e et 6 sont recommandées. Pour réaliser un réseau de communication intégrant l’audiovisuel, on utilise des câbles VDI (Voies, Données, Images).
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.75]{cable.png}
+\end{center}
+\end{figure}
+
+\begin{enumerate}
+\item Câble UTP cat. 5 à 2 paires grainées de polyéthylène haute densité. Gaine extérieur en PVC de diamétre 6 mm.
+\item STP cat. 6 à 4 paires isolées de polyoléfine à structure poreuse et blindé individuellement par une feuille de polyester / Aluminium. Gaine extérieure en PVC de diamétre 6 mm.
+\item FTP cat. 5e à 4 paires isolées de polyéthyléne haute densité et enrobé d'une feuille d'aluminium. Gaine extérieure en PVC de diamétre 5,5 mm.
+\end{enumerate}
+
 
 \section{Différents protocoles}
 Un protocole est le moyen de communication utilisé entre les accessoires domotiques. Le choix engage la pérennité de l’installation car il existe plusieurs systèmes, qui constituent autant de langages différents.
