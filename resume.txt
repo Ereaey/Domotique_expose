@@ -1,5 +1,5 @@
 Module à dévelloper : 
-	Box Domotique : Raspberry (C++ ou python)
+	Box Domotique : Raspberry (C++ ou Python)
 
 	Module XPL -> X10 : Envoie et Lecture
 	? Module XPL -> Oregon : Lecture capteur
@@ -10,7 +10,38 @@ Protocole :
 	XPL -> UDP
 	X10 -> Radio
 	Oregon -> Radio (http://www.connectingstuff.net/blog/decodage-protocole-oregon-arduino-1/)
+
 Matériel des modules :
 	CC3200 LaunchPad (C++)
 	https://www.youtube.com/watch?v=-zBxRvkA6mc
+	http://fr.rs-online.com/web/p/kits-de-developpement-pour-radio-frequence/8197420/
+	http://www.ti.com/tool/cc3200-launchxl
 
+Fonctionnalitées Client:
+	Interface Web permettant la géstion de la domotique
+		Création d'une API JSON en python pour la communication dynamique avec le client
+			Ou
+		Utilisation des websocket pour permettre la création d'une interface web dynamique lié au serveur domotique 
+			Création du serveur en python
+			Création des pages web en html / css / javascript / ...
+			Dialogue en JSON entre les pages WEB et le serveur python
+
+Fonctionnalitées de la box :
+	Ajout des périphériques, noeud
+	Envoi d'informations aux périphériques
+	? Récéption d'informations des périphériques
+	? Création de scénarios
+	? Stockage des informations dans une base de données (Graphiques)
+	Affichage des informations et des différents périphériques via l'interface WEB
+
+Fonctionnalitées des modules :
+	Choix du type de Noeud : X10, XPL, Oregon, ...
+	Listage des périphériques du Noeud
+	Transmission des messages aux périphériques
+	Traitement des messages XPL recu
+
+
+Problémes :
+	Comment ajouter des périphériques aux noeuds
+		Comment en avertir la box
+		? Command XPL pour le paramétrage des noeuds ?
