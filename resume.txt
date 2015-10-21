@@ -1,0 +1,16 @@
+Module à dévelloper : 
+	Box Domotique : Raspberry (C++ ou python)
+
+	Module XPL -> X10 : Envoie et Lecture
+	? Module XPL -> Oregon : Lecture capteur
+	Module XPL -> Matériel : Commande de prise
+
+
+Protocole :
+	XPL -> UDP
+	X10 -> Radio
+	Oregon -> Radio (http://www.connectingstuff.net/blog/decodage-protocole-oregon-arduino-1/)
+Matériel des modules :
+	CC3200 LaunchPad (C++)
+	https://www.youtube.com/watch?v=-zBxRvkA6mc
+
