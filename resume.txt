@@ -1,14 +1,15 @@
 Module à dévelloper : 
 	Box Domotique : Raspberry (C++ ou Python)
 
-	Module XPL -> X10 : Envoie et Lecture
+	Module XPL -> Radio : (X10, Oregon, ...)
+	Module XPL -> X10 : Envoie
 	? Module XPL -> Oregon : Lecture capteur
 	Module XPL -> Matériel : Commande de prise
 
 
 Protocole :
 	XPL -> UDP
-	X10 -> Radio
+	X10 -> Radio -> CPL
 	Oregon -> Radio (http://www.connectingstuff.net/blog/decodage-protocole-oregon-arduino-1/)
 
 Matériel des modules :
@@ -40,8 +41,48 @@ Fonctionnalitées des modules :
 	Transmission des messages aux périphériques
 	Traitement des messages XPL recu
 
+Réseau :
+	Connexion de la box au réseau en ethernet
+	Création d'un réseau wifi pour les modules et noeuds
 
-Problémes :
-	Comment ajouter des périphériques aux noeuds
-		Comment en avertir la box
-		? Command XPL pour le paramétrage des noeuds ?
+	
+Exemple XPL :
+cmnd : Commande
+trig : Evenement
+stat : Statut
+//Header
+xpl-cmnd
+{
+hop=1
+source=xpl-xplhal.mamaison//Box
+target=acme-cm12.server//Noeud
+}
+//Content
+control.basic //modifiable
+{
+command=on//Action (totalement modifiable)
+device=b2//Objet dans le noeud
+}
+
+xpl-cmnd
+{
+    hop=1
+    source=xpl-xplhal.myhouse
+    target=acme-cm12.server
+}
+x10.basic
+{
+    command=dim
+    device=a1
+    level=75
+}
+
+
+
+A réaliser : 
+	API Python :
+		Identification (Token)
+		Noeuds
+			Récupération
+
+http://blog.luisrei.com/articles/flaskrest.html
