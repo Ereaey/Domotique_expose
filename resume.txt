@@ -77,12 +77,47 @@ x10.basic
     level=75
 }
 
-
-
-A réaliser : 
-	API Python :
-		Identification (Token)
-		Noeuds
-			Récupération
-
 http://blog.luisrei.com/articles/flaskrest.html
+
+
+Creer un réseau wifi à partir du raspberry
+
+Comment ajouter des périphériques à un réseau wifi existant ?
+
+
+Site Web :
+	Toutes les fonctionnalitées de l'API
+
+noeud : bridge : pont
+Création de l'API en python : 
+	Identification : Login, Password
+		Réponse : Clé
+	Récupération liste des protocoles :
+		Réponse : <(Nom)>
+	Ajout d'un noeud : Nom, Protocole, IP LOCAL
+		Réponse : <(Success Or Fail)>
+	Récupération des noeuds :
+		Réponse : <(Id, Nom, Protocole, IP LOCAL, Etat)>
+	Suppresion d'un noeud : Id
+		Réponse : <(Success Or Fail)>
+	Récupération des capteurs et actionneurs
+		Réponse : <(Id, Nom, Protocole, Type, Etat)>
+	Ajout d'un capteur ou actionneur : Protocole, Nom, Type, Noeud
+		Réponse : <(Success Or Fail)>
+	Supression d'un capteur ou actionneur : Id
+		Réponse : <(Success Or Fail)>
+	Modification de l'état d'un actionneur : Nom, ON / OFF
+		Réponse : <(Success Or Fail)>
+	Reload du serveur
+		Réponse : <(Success Or Fail)>
+
+Base SQlite
+	User (id, login, password)
+	Protocole (id, name)
+	Noeud (id, ip, id_protocole)
+	Noeud_Protocole (id, id_noeud, id_protocole)
+	Capteurs (id, id_noeud, id_protocole, data)
+	Actionneurs (id, id_noeud, id_protocole)
+
+Serveur python (UDP) :
+	Lire la base SQLite
